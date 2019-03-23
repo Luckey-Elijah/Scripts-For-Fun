@@ -28,6 +28,4 @@ chsh -s $(which zsh)
 # setting the given temp.zshrc to ./.zshrc
 mv temp.zshrc ~/.zshrc
 
-# setup of Dropbox
-# cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-# ~/.dropbox-dist/dropboxd
+echo "\nRestart your session for changes to take effect.\n"
