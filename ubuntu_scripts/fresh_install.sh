@@ -7,6 +7,7 @@ echo "Root privileages are required and a 64-bit system."
 echo "This script will install severall applications and make some changes to the system. Restart is required after the script is run. Let's get this started. Make sure you have a high-speed internet connection.\n\n"
 
 # prep system with updates
+sudo su
 sudo apt update
 sudo apt upgrade
 
