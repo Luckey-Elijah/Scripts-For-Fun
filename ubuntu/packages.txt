@@ -1,3 +1,4 @@
+apt-transport-https
 base-passwd
 chrome-gnome-shell
 curl
@@ -61,6 +62,7 @@ python-setuptools-doc
 python3-pip
 python3
 sddm
+software-properties-common
 tilda
 tmux
 tree
@@ -80,4 +82,5 @@ x11-xserver-utils
 xorg
 xserver-xorg
 xterm
+yarn
 zsh

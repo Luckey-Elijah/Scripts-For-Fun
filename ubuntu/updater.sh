@@ -6,10 +6,8 @@ echo "|   This may take a little     |"
 echo "|   bit of time.               |"
 echo "+------------------------------+"
 
-
 # Password is required for this.
 # Starts update process.
-
 sudo apt update -y
 sudo apt upgrade -y
 
