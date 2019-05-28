@@ -15,4 +15,4 @@ sudo apt install $(cat packages.txt)
 
 # Installs from other sources
 
-# VS Code
+# VS Code build from source
