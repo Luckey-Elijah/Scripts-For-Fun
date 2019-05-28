@@ -62,6 +62,7 @@ python-setuptools-doc
 python3-pip
 python3
 sddm
+snapd
 software-properties-common
 tilda
 tmux
