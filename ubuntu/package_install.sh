@@ -8,17 +8,22 @@ echo "+--------- Package Installer ---------+"
 echo "| This may take a little bit of time. |"
 echo "| You may be prompted to enter your   |"
 echo "| password for installation.          |"
+echo "|                                     |"
+echo "| Make sure you are in the same       |"
+echo "| as the packages.txt file.           |"
 echo "+-------------------------------------+"
 
 # Installs from package list
-sudo apt install $(cat packages.txt)
+sudo apt install $(cat ./packages.txt)
 
 # Installs from other sources
 
 # Draw.io
-wget https://github.com/jgraph/drawio-desktop/releases/download/v9.3.1/draw.io-amd64-9.3.1.deb 
-sudo dpkg -i draw.io-amd64-9.3.1.deb
-rm draw.io-amd64-9.3.1.deb
+
+
+# wget https://github.com/jgraph/drawio-desktop/releases/download/v9.3.1/draw.io-amd64-9.3.1.deb 
+# sudo dpkg -i draw.io-amd64-9.3.1.deb
+# rm draw.io-amd64-9.3.1.deb
 
 # Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
