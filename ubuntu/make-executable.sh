@@ -2,20 +2,32 @@
 
 # constants
 extension='.sh'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+binpath='/usr/bin'
 
 # excludes
-ex0='updater.sh'
-ex1='package-install.sh'
+ex1=updater.sh
+ex2=package-install.sh
+ex3=make-executable.sh
+# excludes=('updater.sh', 'package-install.sh', 'make-executable.sh')
+
+echo -e "This will make changes to your ${GREEN}$binpath${NC} path"
+pause
 
 for file in *"$extension"; do
 
-    if [ "$file" == "$ex0" ] || [ "$file" == "$ex1" ]
+    if [ "$file" == "$ex1" ] || [ "$file" == "$ex2" ] || [ "$file" == "$ex3" ]
     then
-        echo "Not intalling tool $file."
+        echo -e "Not intalling ${RED}$file${NC}."
     else
-        echo "chmod +x $file"
+        # prints what script is being installed
+        echo -e "Installing ${GREEN}`basename "$file" "$extension"`${NC} to $binpath."
+
+        # mods the policy and moves file
         chmod +x "$file"
-        basename "$file" "$extension"
+        cp $file $binpath/`basename "$file" "$extension"`
+        chmod -x "$file"
     fi
 done
-
