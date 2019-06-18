@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# First for good measure
-sudo apt update 
+# listens for user input
+function pause(){
+    read -p "$*"
+}
 
 # Prompt
 echo "+--------- Package Installer ---------+"
@@ -11,10 +13,19 @@ echo "| password for installation.          |"
 echo "|                                     |"
 echo "| Make sure you are in the same       |"
 echo "| as the packages.txt file.           |"
+echo "|                                     |"
+echo "| Press [ENTER] to continue.          |"
 echo "+-------------------------------------+"
 
+pause
+
+# First for good measure
+sudo apt update 
+
 # Installs from package list
-sudo apt install $(cat ./packages.txt)
+sudo apt install $(cat ./# First for good measure
+sudo apt update 
+packages.txt)
 
 # Installs from other sources
 

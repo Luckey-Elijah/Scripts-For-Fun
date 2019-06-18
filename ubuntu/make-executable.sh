@@ -11,7 +11,10 @@ binpath='/usr/bin'
 ex1=updater.sh
 ex2=package-install.sh
 ex3=make-executable.sh
-# excludes=('updater.sh', 'package-install.sh', 'make-executable.sh')
+
+function pause(){
+    read -p "$*"
+}
 
 echo -e "This will make changes to your ${GREEN}$binpath${NC} path"
 pause
