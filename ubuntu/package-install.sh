@@ -45,5 +45,14 @@ rm sendanywhere_latest_amd64.deb
 # sudo dpkg -i teamviewer_amd64.deb
 # rm teamviewer_amd64.deb
 
+# Set up for ZSH and Oh-my-zsh
+sudo chsh -s /usr/bin/zsh root
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+source ~/.zshrc
+
+# Install Spaceship theme
+npm install -g spaceship-prompt
+
 sudo apt autoremove
 sudo apt autoclean

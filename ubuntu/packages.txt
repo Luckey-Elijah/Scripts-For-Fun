@@ -64,6 +64,5 @@ wget
 x11-xserver-utils
 xorg
 xserver-xorg
-xterm
-yarn
+yarn    
 zsh
