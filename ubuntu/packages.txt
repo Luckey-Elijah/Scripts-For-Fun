@@ -16,17 +16,12 @@ g++-8-multilib
 g++-multilib
 gcc-8-doc
 gcc
-gir1.2-gnomekeyring-1.0
 git
 gnome-tweaks
 golang
 grep
 grub-common
-grub-gfxpayload-lists
-grub-pc-bin
-grub-pc
 grub2-common
-guake
 gzip
 hostname
 init
@@ -66,7 +61,6 @@ unzip
 upower
 vim
 wget
-wine64
 x11-xserver-utils
 xorg
 xserver-xorg
