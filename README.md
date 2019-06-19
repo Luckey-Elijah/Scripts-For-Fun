@@ -7,3 +7,5 @@ Dependant on these free tools:
   - [Apt](https://packages.ubuntu.com/)
   - [Chocolatey](https://chocolatey.org/)
   - [Homebrew](https://brew.sh/)
+
+Written by Elijah Luckey.
