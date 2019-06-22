@@ -1,7 +1,12 @@
 #!/bin/bash
 
 trashPath="~/.Trash"
-numItems=`ls -l ~/Trash | wc -l`
+numItems=`ls -l ~/.Trash | wc -l`
+
+# have leading whitespace to remove
+numItems="${numItems#"${numItems%%[![:space:]]*}"}"
+
+# echo $numItems
 
 # checks if can is empty
 function canIsEmpty() {
@@ -30,13 +35,13 @@ function emptyAllTrash(){
     exit 0
 }
 
-# if the bin is empty then returns true
+# if the bin is empty then returns zero
 function isCanEmpty() {
     if [ "$numItems" == 0 ]
     then
-        return true
+        return 0
     fi
-    return false
+    return 1
 }
 
 # driver code for emptying the trash
@@ -45,10 +50,10 @@ function main() {
     then
         canIsEmpty
     else
-        if [ $1 == "file" -o $1 == "files" -o $1 == "f" ]
+        if [ "$1" == "file" -o "$1" == "files" -o "$1" == "f" ]
         then
             rmOnlyFiles
-        elif [ $1 == "dir" -o $1 == "directory" -o $1 == "d" ]
+        elif [ "$1" == "dir" -o "$1" == "directory" -o "$1" == "d" ]
         then
             rmOnlyDir
         else 
