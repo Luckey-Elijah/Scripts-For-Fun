@@ -3,26 +3,40 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 choco feature enable -n=allowGlobalConfirmation
 
-# Installs from Chocolately
+refreshenv
+
+ # # # # # # # Installs from Chocolately # # # # # # #
 
 # BROWSERS
 
-choco install googlechrome chromium firefox brave 
+choco install brave Firefox googlechrome vivaldi
+
+# PRODUCTIVITY
+
+choco install boostnote zettlr telegram spotify slack mailspring lastpass googledrive f.lux dropbox discord chocolatey-windowsupdate.extension
 
 # DEVELOPER ITEMS
 
-    # Misc
+    # Languages
 
-choco install git vscode sublimetext3 vim wsl-ubuntu-1804
+    choco install golang jdk8 jre8 python python3 rust
 
-    # Python
+    # Editors and IDES
 
-choco install python pip pycharm-community
+    choco install vscode
 
-    # Golang
+    # Tools
 
-choco install golang goland
+    choco install yarn pip git
 
-    # Java
+    # Fonts
 
-choco isntall jre11 jdk11 intellijidea-community maven gradle
+    choco install hackfont firacode sourcecodepro
+
+# TOOLS
+
+choco install grep rufus 7zip curl cpu-z wireshark nmap bulk-crap-uninstaller
+
+# MEDIA ITEMS
+
+choco install youtube-dl vlc reaper gimp
