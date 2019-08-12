@@ -1,25 +1,28 @@
 # Installing chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+# this allows items to be install without the "-y" flag. 
 choco feature enable -n=allowGlobalConfirmation
 
 refreshenv
 
- # # # # # # # Installs from Chocolately # # # # # # #
+# # # # # # # Installs from Chocolately # # # # # # #
 
 # BROWSERS
 
-choco install brave Firefox googlechrome vivaldi
+choco install brave firefox googlechrome vivaldi
 
 # PRODUCTIVITY
 
-choco install boostnote zettlr telegram spotify slack mailspring lastpass googledrive f.lux dropbox discord chocolatey-windowsupdate.extension
+# some applications are commented out bc they are already (occasionally) installed or pose issues during installation
+choco install zettlr telegram slack mailspring lastpass googledrive dropbox # spotify discord boostnote
 
 # DEVELOPER ITEMS
 
     # Languages
 
-    choco install golang jdk8 jre8 python python3 rust
+    # jdk8 and jre8 are commented out bc they take a long time
+    choco install golang python python3 rust # jdk8 jre8
 
     # Editors and IDES
 
@@ -35,8 +38,10 @@ choco install boostnote zettlr telegram spotify slack mailspring lastpass google
 
 # TOOLS
 
-choco install grep rufus 7zip curl cpu-z wireshark nmap bulk-crap-uninstaller
+# CPU-Z and wireshark aren't as common fo use. Can always be installed at a later time.
+choco install grep rufus 7zip curl nmap bulk-crap-uninstaller # cpu-z wireshark
 
 # MEDIA ITEMS
 
-choco install youtube-dl vlc reaper gimp
+# gimp and raper are large and won't be installed by default
+choco install youtube-dl vlc # gimp reaper
