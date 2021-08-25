@@ -10,38 +10,37 @@ refreshenv
 
 # BROWSERS
 
-choco install brave firefox googlechrome vivaldi
+choco install firefox # brave googlechrome vivaldi
 
 # PRODUCTIVITY
 
 # some applications are commented out bc they are already (occasionally) installed or pose issues during installation
-choco install zettlr telegram slack mailspring lastpass googledrive dropbox # spotify discord boostnote
+choco install telegram spotify discord # slack mailspring lastpass googledrive dropbox boostnote zettlr
 
 # DEVELOPER ITEMS
 
-    # Languages
+# Languages
 
-    # jdk8 and jre8 are commented out bc they take a long time
-    choco install golang python python3 rust # jdk8 jre8
+# choco install golang python python3 rust jdk8 jre8
 
-    # Editors and IDES
+# Editors and IDES
 
-    choco install vscode
+choco install vscode
 
-    # Tools
+# Tools
 
-    choco install yarn pip git
+choco install git # yarn pip
 
-    # Fonts
+# Fonts
 
-    choco install hackfont firacode sourcecodepro
+choco install firacode # sourcecodepro hackfont
 
 # TOOLS
 
 # CPU-Z and wireshark aren't as common fo use. Can always be installed at a later time.
-choco install grep rufus 7zip curl nmap bulk-crap-uninstaller # cpu-z wireshark
+choco install grep 7zip curl # cpu-z wireshark rufus nmap bulk-crap-uninstaller
 
 # MEDIA ITEMS
 
 # gimp and raper are large and won't be installed by default
-choco install youtube-dl vlc # gimp reaper
+choco install vlc # youtube-dl gimp reaper
