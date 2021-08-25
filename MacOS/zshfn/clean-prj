@@ -1,0 +1,20 @@
+#!/bin/bash -e
+
+# e: Exit if something fails
+# x: Show trace of script
+# set -xe
+
+rm pubspec.lock
+echo "Deleted the pubspec.lock file"
+
+rm ios/Podfile.lock
+echo "Deleted the iOS Podspec.lock file"
+
+rm -rf ios/Pods/
+echo "Deleted the Pods/ folder"
+
+flutter pub get
+
+# cd ios
+echo "Running pod install"
+pod install --silent --project-directory=ios

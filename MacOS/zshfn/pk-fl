@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Dart Code extension has this issue.
+
+echo "Kill processes that match:"
+echo "\t/Applications/Xcode.app/Contents/Developer/usr/bin/xcdevice observe --both"
+
+pkill -f '/Applications/Xcode.app/Contents/Developer/usr/bin/xcdevice observe --both'

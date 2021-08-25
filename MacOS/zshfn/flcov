@@ -1,0 +1,23 @@
+#!/bin/bash -e
+
+# Function for generating Flutter code coverage and run tests on given path.
+
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+datetime=$(date +"%F-%R")
+coverage_name="coverage/coverage-${datetime}"
+full_path="${HOME}/${coverage_name}"
+
+
+echo "┌──────────────────────────────────────────────────────────────┐"
+echo "│ Running test with ${GREEN}--coverage${NC} and generating coverage report. │"
+echo "│ Coverage path: ${GREEN}~/${coverage_name}${NC}          │"
+echo "└──────────────────────────────────────────────────────────────┘"
+
+echo "Creating directory: ${full_path}" \
+    && mkdir -p ${full_path} \
+    && flutter test --coverage --coverage-path ${full_path}/lcov.info ${1} \
+    && echo "Generating HTML: ${GREEN}~/${coverage_name}/html${NC}" \
+    && genhtml ${full_path}/lcov.info -o ${full_path}/html -q \
+    && open -a Firefox ${full_path}/html/index.html

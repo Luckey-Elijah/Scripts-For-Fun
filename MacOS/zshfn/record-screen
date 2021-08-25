@@ -1,0 +1,15 @@
+
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+if [ -z "$1" ]
+    then
+        file_name=$(date +"%F-%R".mov)
+    else
+        file_name=$1
+fi
+
+full_path="${HOME}/screen-recordings/${file_name}"
+echo "Recording to: ${GREEN}${full_path}${NC}"
+echo "Use ${GREEN}^C${NC} to complete the recording."
+xcrun simctl io booted recordVideo ${full_path}
